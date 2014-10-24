@@ -7,6 +7,6 @@ app.controller("MainCtrl", function($scope, $firebase) {
 
 	$scope.items = sync.$asObject();
 	// for debugging
-	//console.log($scope.items);
+	console.log($scope.items);
 
 });

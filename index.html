@@ -24,28 +24,29 @@
                 <h3>Bird Strikes!</h3>
                 <p>Bird Strikes Reported by FAA</p>
                 <!-- 
-               Aircraft: "B-757-200"
-               Airport: "NEWARK LIBERTY INTL ARPT"
-               Engines: "2"
-               FeetAboveGround: "0"
-               FlightDate: "1/1/2000 0:00"
-               FlightImpact: ""
-               FlightPhase: "Take-off run"
-               ID: "0"
-               IndicatedDamage: "No damage"
-               Operator: "CONTINENTAL AIRLINES"
-               Origin State: "New Jersey"
-               Precipitation: "Fog"
-               TimeofDay: "Day
-               "When: Time (HHMM): "943"
-               WildlifeSize: "Medium"
-               knots: ""
+             Aircraft: "B-757-200"
+             Airport: "NEWARK LIBERTY INTL ARPT"
+             Conditions: "Fog"
+             Engines: "2"
+             Feet: "0"
+             FlightDate: "1/1/2000 0:00"
+             FlightImpact: ""
+             FlightPhase: "Take-off run"
+             ID: "0"
+             IndicatedDamage: "No damage"
+             Knots: ""
+             Operator: "CONTINENTAL AIRLINES"
+             Origin: "New Jersey"
+             Timeofday: "Day"
+             When: "943"
+             WildlifeSize: "Medium"
                 -->
                 <div class="row">
                     <table class="table-striped table-bordered">
                     <tr>
                             <th>Aircraft</th>
                             <th>Airport</th>
+                            <th>Conditions</th>
                             <th>Engines</th>
                             <th>Feet Above Ground</th>
                             <th>Flight Date</th>
@@ -54,7 +55,6 @@
                             <th>Indicated Damage</th>
                             <th>Operator</thth>
                             <th>Origin State</th>
-                            <th>Precipitiation</th>
                             <th>Time of Day</th>
                             <th>When</th>
                             <th>Wildlife Size</th>
@@ -62,21 +62,20 @@
                     </tr>
                         <tr ng-repeat="item in items">
                             <td>{{item.Aircraft}}</td>
+                            <td>{{item.Conditions}}</td>
                             <td>{{item.Airport}}</td>
                             <td>{{item.Engines}}</td>
-                            <td>{{item.FeetAboveGround}}</td>
+                            <td>{{item.Feet}}</td>
                             <td>{{item.FlightDate}}</td>
                             <td>{{item.FlightImpact}}</td>
                             <td>{{item.FlightPhase}}</td>
                             <td>{{item.IndicatedDamage}}</td>
                             <td>{{item.Operator}}</td>
-                            <td>{{item.OriginState}}</td>
-                            <td>{{item.Precipitation}}</td>
-                            <td>{{item.TimeofDay}}</td>
+                            <td>{{item.Origin}}</td>
+                            <td>{{item.Timeofday}}</td>
                             <td>{{item.When}}</td>
                             <td>{{item.WildlifeSize}}</td>
                             <td>{{item.Knots}}</td>
-
                         </tr>
                     </table>
                 </div>
