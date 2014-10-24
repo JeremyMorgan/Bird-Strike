@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firecomApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Bird Strikes!</title>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+        <!-- App -->
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="MainCtrl">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Bird Strikes!</h3>
+                <p>Bird Strikes Reported by FAA</p>
+                <!-- 
+             Aircraft: "B-757-200"
+             Airport: "NEWARK LIBERTY INTL ARPT"
+             Conditions: "Fog"
+             Engines: "2"
+             Feet: "0"
+             FlightDate: "1/1/2000 0:00"
+             FlightImpact: ""
+             FlightPhase: "Take-off run"
+             ID: "0"
+             IndicatedDamage: "No damage"
+             Knots: ""
+             Operator: "CONTINENTAL AIRLINES"
+             Origin: "New Jersey"
+             Timeofday: "Day"
+             When: "943"
+             WildlifeSize: "Medium"
+                -->
+                <div class="row">
+                    <table class="table-striped table-bordered">
+                    <tr>
+                            <th>Aircraft</th>
+                            <th>Airport</th>
+                            <th>Conditions</th>
+                            <th>Engines</th>
+                            <th>Feet Above Ground</th>
+                            <th>Flight Date</th>
+                            <th>Impact</th>
+                            <th>Flight Phase</th>
+                            <th>Indicated Damage</th>
+                            <th>Operator</thth>
+                            <th>Origin State</th>
+                            <th>Time of Day</th>
+                            <th>When</th>
+                            <th>Wildlife Size</th>
+                            <th>Knots</th>
+                    </tr>
+                        <tr ng-repeat="item in items">
+                            <td>{{item.Aircraft}}</td>
+                            <td>{{item.Conditions}}</td>
+                            <td>{{item.Airport}}</td>
+                            <td>{{item.Engines}}</td>
+                            <td>{{item.Feet}}</td>
+                            <td>{{item.FlightDate}}</td>
+                            <td>{{item.FlightImpact}}</td>
+                            <td>{{item.FlightPhase}}</td>
+                            <td>{{item.IndicatedDamage}}</td>
+                            <td>{{item.Operator}}</td>
+                            <td>{{item.Origin}}</td>
+                            <td>{{item.Timeofday}}</td>
+                            <td>{{item.When}}</td>
+                            <td>{{item.WildlifeSize}}</td>
+                            <td>{{item.Knots}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row" id="footer">
+                <div class="col-md-12">
+                    <h3>
+                    </h3>
+                    <p>&copy; Jeremy Morgan I guess </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
