@@ -7,7 +7,7 @@
         <meta name="author" content="">
         <title>Bird Strikes!</title>
         <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-        
+        <link href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css" rel="stylesheet">
         <!-- AngularJS -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
         <!-- Firebase -->
@@ -16,13 +16,24 @@
         <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
         <!-- App -->
         <script src="app.js"></script>
+
     </head>
     <body ng-controller="MainCtrl">
         <div class="container">
+
         <div class="row">
             <div class="col-md-12">
                 <h3>Bird Strikes!</h3>
                 <p>Bird Strikes Reported by FAA</p>
+                <br />
+        		<select>
+			  		<option value="NEWARK LIBERTY INTL ARPT">NEWARK LIBERTY INTL ARPT</option>
+			  		<option value="DENVER INTL AIRPORT">DENVER INTL AIRPORT</option>
+			  		<option value="JOHN F KENNEDY INTL">JOHN F KENNEDY INTL</option>
+			  		<option value="UNKNOWN">UNKNOWN</option>
+				</select>
+
+
                 <!-- 
              Aircraft: "B-757-200"
              Airport: "NEWARK LIBERTY INTL ARPT"
@@ -42,7 +53,7 @@
              WildlifeSize: "Medium"
                 -->
                 <div class="row">
-                    <table class="table-striped table-bordered">
+                    <table class="table-striped table-bordered" id="datatable">
                     <tr>
                             <th>Aircraft</th>
                             <th>Airport</th>
